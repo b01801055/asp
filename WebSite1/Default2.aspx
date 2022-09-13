@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="Default2" %>
 
 <!DOCTYPE html>
 
@@ -10,9 +10,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <% Response.Write("Hello"); %>
-            123
-            456
+            123<br />
+            45<br />
         </div>
     </form>
 </body>
