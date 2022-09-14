@@ -9,12 +9,19 @@ public partial class Default3 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
-    }
+        if (!Page.IsPostBack)
+        {
 
+        }
+        else
+        {
+            int i = Convert.ToInt32(Label1.Text) + 1;
+            Label1.Text = i.ToString();
+        }
+    }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        int i = Convert.ToInt32(Label1.Text) + 1;
-        Label1.Text = i.ToString();
+        //int i = Convert.ToInt32(Label1.Text) + 1;
+        //Label1.Text = i.ToString();
     }
 }
