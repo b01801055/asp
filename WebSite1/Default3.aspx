@@ -13,11 +13,19 @@
             <asp:Label ID="Label1" runat="server" ForeColor="Red" Text="0" EnableViewState="False"></asp:Label>
         </div>
         <p>
-            <asp:Button ID="Button1" runat="server" Height="23px" OnClick="Button1_Click" Text="Button1" />
+           
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button1" />
+           
         </p>
         <input type="submit" text="Submit" />
 
         <input type="button" value="Button" />
+        <p>
+            &nbsp;</p>
+        <p>
+            <asp:Button ID="Button2" runat="server" OnClick="Button1_Click" Text="Button2" />
+           
+        </p>
     </form>
 </body>
 </html>
