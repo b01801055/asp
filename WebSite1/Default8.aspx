@@ -13,7 +13,12 @@
             <br />
             year:<asp:DropDownList ID="DropDownList1" runat="server">
             </asp:DropDownList>
-&nbsp;&nbsp;&nbsp; month:<asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True">
+&nbsp;&nbsp;&nbsp; month:<asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
+                <asp:ListItem>1</asp:ListItem>
+                <asp:ListItem>2</asp:ListItem>
+                <asp:ListItem>3</asp:ListItem>
+                <asp:ListItem>4</asp:ListItem>
+                <asp:ListItem>5</asp:ListItem>
             </asp:DropDownList>
         </p>
         <div>
