@@ -1,0 +1,19 @@
+﻿ASP.NET 如何設定全站共用的 BasePage 類別
+http://blog.miniasp.com/post/2008/01/09/How-to-set-a-global-BasePage-in-ASPNET.aspx
+
+ASP.NET 如何設定全站共用的 BasePage 類別
+http://www.allenkuo.com/EBook5/view.aspx?TreeNodeID=10&id=131
+
+[ASP.NET] 自訂 BasePage
+http://www.dotblogs.com.tw/atowngit/archive/2009/12/13/12414.aspx
+
+[範例]ASP.NET使用Session驗證練習範例
+http://www.dotblogs.com.tw/topcat/archive/2014/09/24/146692.aspx
+
+[ASP.NET]實作Web Form的畫面繼承
+http://www.dotblogs.com.tw/jimmyyu/archive/2009/11/29/12219.aspx
+
+論壇討論
+https://social.msdn.microsoft.com/Forums/zh-TW/ddd3de9e-662c-47b6-97ec-0fc14ffc2f19/basepage?forum=236
+
+http://www.blueshop.com.tw/board/FUM20041006161839LRJ/BRD20060829065702EVZ.html

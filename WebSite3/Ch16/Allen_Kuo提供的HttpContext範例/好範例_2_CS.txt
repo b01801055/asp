@@ -1,0 +1,42 @@
+另一個好範例
+資料來源  http://www.binaryintellect.net/articles/c585b4d3-93c5-4c66-9d49-8e1946f4d311.aspx
+
+
+第一頁
+
+		public string Name
+		{
+			get
+			{
+				return TextBox1.Text;
+			}
+		}
+
+		public string EMail
+		{
+			get
+			{
+				return TextBox2.Text;
+			}
+		}
+
+
+		private void Button1_Click(object sender, System.EventArgs e)
+		{
+			Server.Transfer("anotherwebform.aspx");
+		}
+
+
+//====================================
+
+第二頁（目的地）
+
+		private void Page_Load(object sender, System.EventArgs e)
+		{
+			//create instance of source web form
+			WebForm1 wf1;
+			//get reference to current handler instance
+			wf1=(WebForm1)Context.Handler;
+			Label1.Text=wf1.Name;
+			Label2.Text=wf1.EMail;
+		}

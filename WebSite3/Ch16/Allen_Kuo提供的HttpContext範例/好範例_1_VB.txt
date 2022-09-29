@@ -1,0 +1,34 @@
+資料來源 --
+http://odetocode.com/Articles/111.aspx
+
+
+
+WebForm1.aspx
+
+		Private Sub Page_Load(sender As Object, e As System.EventArgs)
+			Dim list As New ArrayList(3)
+			list.Add("This list ")
+			list.Add("is for ")
+			list.Add("WebForm2 to see.")
+
+			Context.Items("WebForm1List") = list
+
+			Server.Transfer("WebForm2.aspx")
+			' 務必搭配 Server.Transfer()方法來傳遞。
+		End Sub
+
+
+
+' ================================================
+
+WebForm2.aspx
+
+		Private Sub Page_Load(sender As Object, e As System.EventArgs)
+			Dim list As ArrayList = TryCast(Context.Items("WebForm1List"), ArrayList)
+
+			If list IsNot Nothing Then
+				For Each s As String In list
+					Response.Write(s)
+				Next
+			End If
+		End Sub

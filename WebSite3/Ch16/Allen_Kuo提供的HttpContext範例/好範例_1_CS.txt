@@ -1,0 +1,37 @@
+資料來源 --
+http://odetocode.com/Articles/111.aspx
+
+
+
+WebForm1.aspx
+
+		private void Page_Load(object sender, System.EventArgs e)
+		{
+		   ArrayList list = new ArrayList(3);
+		   list.Add("This list ");
+		   list.Add("is for ");
+		   list.Add("WebForm2 to see.");
+
+		   Context.Items["WebForm1List"] = list;
+
+		   Server.Transfer("WebForm2.aspx");
+		   // 務必搭配 Server.Transfer()方法來傳遞。
+		}
+
+
+//================================================
+
+WebForm2.aspx
+
+		private void Page_Load(object sender, System.EventArgs e)
+		{
+		   ArrayList list = Context.Items["WebForm1List"] as ArrayList;
+
+		   if(list != null)
+		   {
+		      foreach(string s in list)
+		      {
+		         Response.Write(s);
+		      }
+		   }
+		}
