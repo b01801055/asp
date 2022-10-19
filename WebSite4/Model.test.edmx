@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="testModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="test">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="test_time" Type="datetime" />
+          <Property Name="class" Type="nvarchar" MaxLength="50" />
+          <Property Name="title" Type="nvarchar" MaxLength="120" />
+          <Property Name="summary" Type="nvarchar" MaxLength="200" />
+          <Property Name="article" Type="nvarchar(max)" />
+          <Property Name="author" Type="nvarchar" MaxLength="50" />
+          <Property Name="hit_no" Type="int" />
+          <Property Name="get_no" Type="int" />
+          <Property Name="email_no" Type="int" />
+          <Property Name="approved" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="testModel1StoreContainer">
+          <EntitySet Name="test" EntityType="Self.test" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="testModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="test">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="test_time" Type="DateTime" Precision="3" />
+          <Property Name="class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="title" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="summary" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="article" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hit_no" Type="Int32" />
+          <Property Name="get_no" Type="Int32" />
+          <Property Name="email_no" Type="Int32" />
+          <Property Name="approved" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="testEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="test" EntityType="Self.test" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="testModel1StoreContainer" CdmEntityContainer="testEntities1">
+          <EntitySetMapping Name="test">
+            <EntityTypeMapping TypeName="testModel1.test">
+              <MappingFragment StoreEntitySet="test">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="test_time" ColumnName="test_time" />
+                <ScalarProperty Name="class" ColumnName="class" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="summary" ColumnName="summary" />
+                <ScalarProperty Name="article" ColumnName="article" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="hit_no" ColumnName="hit_no" />
+                <ScalarProperty Name="get_no" ColumnName="get_no" />
+                <ScalarProperty Name="email_no" ColumnName="email_no" />
+                <ScalarProperty Name="approved" ColumnName="approved" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
